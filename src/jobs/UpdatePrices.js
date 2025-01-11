@@ -3,7 +3,7 @@ const cron  = require('node-cron');
 const CryptoPrice = require('../models/CryptoPrice');
 const SUPPORTED_COINS = ['bitcoin', 'matic-network', 'ethereum'];
 async function fetchCoinData(coinId){
-    // console.log(`Fetching data for ${coinId}.....`);
+    console.log(`Fetching data for ${coinId}.....`);
     try{
         const response = await axios.get('https://api.coingecko.com/api/v3/simple/price',{
             params: {
